@@ -1,0 +1,18 @@
+# guessing-games
+
+import random
+
+number = random.randint(1, 10)
+print(number)
+
+guess = int(input("Enter a number between 1 and 10: "))
+
+if guess == number:
+    print("Your guess was right!")
+    
+elif guess < number:
+    print("The number was too low")
+
+else:
+    print("Too high")
+   
