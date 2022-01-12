@@ -1,0 +1,30 @@
+# guessing-games
+
+import random
+
+number = random.randint(1, 10)
+print(number) # have a sneak peek!
+
+keepGoing = True
+
+while keepGoing:
+    
+    guess = int(input("Enter a number between 1 and 10: "))
+    
+    if guess == number:
+        print("Correct")
+        goAgain = input("Play again? (Y/N): ")
+        if goAgain == "N":
+            keepGoing = False
+        else:
+            number = random.randint(1, 10)
+            print(number)
+            
+    elif guess < number:
+        print("Too low")
+        
+    else:
+        print("Too high")
+        
+print("Goodbye")
+        
